@@ -17,7 +17,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
 
-        NotificationCenter.default.addObserver(self, selector: #selector(didBecomeActive), name: NSNotification.Name.UIApplicationDidBecomeActive, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(didBecomeActive), name: UIApplication.didBecomeActiveNotification, object: nil)
 
         
 
@@ -28,7 +28,7 @@ class ViewController: UIViewController {
         
     }
 
-    func didBecomeActive(_ notification: Notification) {
+    @objc func didBecomeActive(_ notification: Notification) {
         
         
     }
