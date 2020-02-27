@@ -10,15 +10,11 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@master
-      - name: Install Dependences
+      - name: Build and Test
         run: |
           ls -al
           pod repo update
           pod install
-        shell: bash
-      - name: Build and Test
-        run: |
-          ls -al
           xcodebuild clean test -project iosapp.xcworkspace -scheme iosapp -destination "${destination}" CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO ONLY_ACTIVE_ARCH=NO
         env:
          destination: ${{ matrix.destination }}
