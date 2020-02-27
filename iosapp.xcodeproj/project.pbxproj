@@ -18,6 +18,7 @@
 		555C91CC1D0F0731003E84E3 /* iosappUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 555C91CB1D0F0731003E84E3 /* iosappUITests.swift */; };
 		873310C0C7B2ABB91C7D52FD /* Pods_iosappUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B4B5A393DF200730607CBCEB /* Pods_iosappUITests.framework */; };
 		EAD767594B197EC0EC3F0D1C /* Pods_iosappTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1C8444BFD52D97CDB7A1B788 /* Pods_iosappTests.framework */; };
+		FB5DA24F23F73AFE007019D1 /* CustomUIButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB5DA24E23F73AFE007019D1 /* CustomUIButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +62,7 @@
 		9055531899FF137C2C228D44 /* Pods-iosappUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iosappUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-iosappUITests/Pods-iosappUITests.release.xcconfig"; sourceTree = "<group>"; };
 		B4B5A393DF200730607CBCEB /* Pods_iosappUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iosappUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C588E03443573F2DDF2BE953 /* Pods_iosapp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iosapp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FB5DA24E23F73AFE007019D1 /* CustomUIButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomUIButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -129,6 +131,7 @@
 				318A2DB3E1C541E2BF1E5995 /* BMSCredentials.plist */,
 				555C91AB1D0F0731003E84E3 /* AppDelegate.swift */,
 				555C91AD1D0F0731003E84E3 /* ViewController.swift */,
+				FB5DA24E23F73AFE007019D1 /* CustomUIButton.swift */,
 				555C91AF1D0F0731003E84E3 /* Main.storyboard */,
 				555C91B21D0F0731003E84E3 /* Assets.xcassets */,
 				555C91B41D0F0731003E84E3 /* LaunchScreen.storyboard */,
@@ -326,15 +329,12 @@
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-iosapp/Pods-iosapp-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/BMSAnalyticsAPI/BMSAnalyticsAPI.framework",
-				"${BUILT_PRODUCTS_DIR}/BMSCore/BMSCore.framework",
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-iosapp/Pods-iosapp-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/BMSAnalyticsAPI.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/BMSCore.framework",
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-iosapp/Pods-iosapp-frameworks-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -386,6 +386,7 @@
 			files = (
 				555C91AE1D0F0731003E84E3 /* ViewController.swift in Sources */,
 				555C91AC1D0F0731003E84E3 /* AppDelegate.swift in Sources */,
+				FB5DA24F23F73AFE007019D1 /* CustomUIButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
