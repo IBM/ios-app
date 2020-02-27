@@ -1,9 +1,5 @@
-<img src="https://bluemixassets.eu-gb.mybluemix.net/api/Products/image/logos/basic.svg?key=[starter-basic]&event=readme-image-view" alt="Basic Logo" width="200px"/>
+## IBM Cloud Mobile Starter in Swift
 
-## Empty Starter
-Empty IBM Cloud Mobile Starter in Swift
-
-[![](https://img.shields.io/badge/bluemix-powered-blue.svg)](https://bluemix.net)
 [![Platform](https://img.shields.io/badge/platform-ios_swift-lightgrey.svg?style=flat)](https://developer.apple.com/swift/)
 
 ### Table of Contents
@@ -15,13 +11,13 @@ Empty IBM Cloud Mobile Starter in Swift
 
 ### Summary
 
-The Empty mobile starter kit in Swift is an empty project. This project provides integration hooks that allow integration with the IBM Cloud Mobile services.
+The mobile starter kit in Swift is an empty project. This project provides integration hooks that allow integration with the IBM Cloud Mobile services.
 
 ### Requirements
 
-* iOS 8.0+
-* Xcode 8.0
-* Swift 3.0
+* iOS 12.0+
+* Xcode 10.0
+* Swift 5.0
 
 ### Configuration
 * [IBM Cloud Mobile services Dependency Management](#ibm-cloud-mobile-services-dependency-management)
@@ -32,7 +28,7 @@ The Empty mobile starter kit in Swift is an empty project. This project provides
 
 This starter kit uses the IBM Cloud Mobile services SDKs to use the functionality of Mobile Analytics, Push Notifications and Mobile Foundation services.
 
-The IBM Cloud Mobile services SDK uses [CocoaPods](https://cocoapods.org/) to manage and configure dependencies. To use our latest SDKs, you need version 1.1.0.rc.2.
+The IBM Cloud Mobile services SDK uses [CocoaPods](https://cocoapods.org/) to manage and configure dependencies. To use our latest SDKs, you need version 1.1.0.rc.2 or later.
 
 You can install CocoaPods using the following command:
 
@@ -59,26 +55,6 @@ If you run into any issues during the pod install, it is recommended to run a po
 $ pod update
 $ pod install
 ```
-
-#### Mobile Foundation Configuration (Optional)
-In case Mobile Foundation is added to the starter kit then follow the below pre steps.
-
-##### Steps:
-
-* Goto the project folder and find a shell scripts by name **mfpregisterapp.sh** and ensure that you have execute and write permissions in order to run these scripts.
-* run **mfpregisterapp.sh**. This should set up the Mobile Foundation prereqs for running the starter.
-
-#### AppLaunch Configuration (Optional)
-In case AppLaunch Service is added to the starter kit then follow the below pre steps.
-
-##### Steps:
-
-* Goto the project folder and find a shell scripts by name **applnchimportsample.sh** and ensure that you have execute and write permissions in order to run these scripts.
-* run **applnchimportsample.sh**. This will populate the sample data for AppLaunch
-* Add AppLaunch framework : 
-  * Download **AppLaunch.framework** from https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-swift-applaunch
-  * Drag and drop the **AppLaunch.framework** into your project.
-  * Add the **AppLaunch.framework** into Embedded Binaries section.
 
 ### Run
 
