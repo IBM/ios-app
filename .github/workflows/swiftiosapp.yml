@@ -12,7 +12,7 @@ jobs:
         uses: actions/checkout@master
       - name: Install Dependences
         run: |
-          cd ios-app
+          ls -al
           pod repo update
           pod install
         shell: bash
