@@ -6,16 +6,21 @@ jobs:
     runs-on: macOS-latest
     strategy:
         matrix:
-          destination: ['platform=iOS Simulator,id=DEC5E859-67C9-4939-87A5-E749D824E541', 'platform=iOS Simulator,id=458AD46E-58ED-4016-875A-70965C6EC869']
+          destination: ['platform=iOS Simulator,id=DEC5E859-67C9-4939-87A5-E749D824E541']
     steps:
       - name: Checkout
         uses: actions/checkout@master
-      - name: Build and Test
+      - name: Build
         run: |
           ls -al
           pod install --repo-update --clean-install
+      - uses: ty0x2333/cocoapods-action@master
+        with:
+          additional_build_params: -destination 'platform=iOS Simulator,id=DEC5E859-67C9-4939-87A5-E749D824E541'
+      - name: Test
+        run: |
           ls -al
           echo "destination=${destination}"
           xcodebuild clean test -workspace iosapp.xcworkspace -scheme iosapp -destination "${destination}" CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO ONLY_ACTIVE_ARCH=NO
         env:
-         destination: ${{ matrix.destination }}
+          destination: ${{ matrix.destination }}
