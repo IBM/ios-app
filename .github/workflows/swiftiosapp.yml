@@ -13,7 +13,6 @@ jobs:
       - name: Build and Test
         run: |
           ls -al
-          pod repo update
           pod install --repo-update --clean-install
           ls -al
           echo "destination=${destination}"
