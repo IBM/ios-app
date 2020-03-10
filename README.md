@@ -1,39 +1,58 @@
-## IBM Cloud Mobile Starter in Swift
+<p align="center">
+    <a href="https://cloud.ibm.com">
+        <img src="https://landscape.cncf.io/logos/ibm-cloud-kcsp.svg" height="100" alt="IBM Cloud">
+    </a>
+</p>
 
-[![Platform](https://img.shields.io/badge/platform-ios_swift-lightgrey.svg?style=flat)](https://developer.apple.com/swift/)
 
-### Table of Contents
-* [Summary](#summary)
-* [Requirements](#requirements)
-* [Configuration](#configuration)
-* [Run](#run)
-* [License](#license)
+<p align="center">
+    <a href="https://cloud.ibm.com">
+    <img src="https://img.shields.io/badge/IBM%20Cloud-powered-blue.svg" alt="IBM Cloud">
+    </a>
+    <img src="https://img.shields.io/badge/platform-ios-lightgrey.svg?style=flat" alt="platform">
+    <img src="https://img.shields.io/badge/license-Apache2-blue.svg?style=flat" alt="Apache 2">
+</p>
 
-### Summary
 
-The mobile starter kit in Swift is an empty project. This project provides integration hooks that allow integration with the IBM Cloud Mobile services.
+# Create an iOS application
 
-### Requirements
+> We have applications available for [Node.js Express](https://github.com/IBM/node-express-app), [Go Gin](https://github.com/IBM/go-gin-app), [Python Flask](https://github.com/IBM/python-flask-app), [Python Django](https://github.com/IBM/python-django-app), [Java Spring](https://github.com/IBM/java-spring-app), [Java Liberty](https://github.com/IBM/java-liberty-app), [Swift Kitura](https://github.com/IBM/swift-kitura-app), [Android](https://github.com/IBM/android-app), and [iOS](https://github.com/IBM/ios-app).
 
-* iOS 12.0+
-* Xcode 10.0
-* Swift 5.0
+In this sample, you will create an iOS application complete with standard best practices built for IBM Cloud.
 
-### Configuration
-* [IBM Cloud Mobile services Dependency Management](#ibm-cloud-mobile-services-dependency-management)
-* [Mobile Foundation Configuration (Optional)](#mobile-foundation-configuration-optional)
-* [AppLaunch Configuration (Optional)](#applaunch-configuration-optional)
+## Steps
 
-#### IBM Cloud Mobile services Dependency Management
+You can manage CI/CD [for this application in IBM Cloud](https://cloud.ibm.com/developer/appservice/create-app?navMode=starterkits) or [build it locally](#building-locally) by cloning this repo first.
 
-This starter kit uses the IBM Cloud Mobile services SDKs to use the functionality of Mobile Analytics, Push Notifications and Mobile Foundation services.
+### Deploying to IBM Cloud
 
-The IBM Cloud Mobile services SDK uses [CocoaPods](https://cocoapods.org/) to manage and configure dependencies. To use our latest SDKs, you need version 1.1.0.rc.2 or later.
+<p align="center">
+    <a href="https://cloud.ibm.com/developer/appservice/create-app?navMode=starterkits">
+    <img src="https://cloud.ibm.com/devops/setup/deploy/button_x2.png" alt="Deploy to IBM Cloud">
+    </a>
+</p>
+
+Use the button above to develop this same application on IBM Cloud. This option will create a CI/CD pipeline, complete with a hosted GitLab project and DevOps toolchain. [IBM Cloud DevOps](https://www.ibm.com/cloud/devops) services provides toolchains as a set of tool integrations that support development, deployment, and operations tasks inside IBM Cloud. 
+
+### Building Locally
+
+To get started building this application locally, you can run the application natively.
+
+#### Native Application Development
+
+- Install the latest [Xcode](https://developer.apple.com/xcode) 11.0+ version.
+- iOS 13.0+
+- Swift 5.0
+
+
+To run your application locally:
+
+The IBM Cloud Mobile services SDK uses [CocoaPods](https://cocoapods.org/) to manage and configure dependencies.
 
 You can install CocoaPods using the following command:
 
 ```bash
-$ sudo gem install cocoapods --pre
+$ sudo gem install cocoapods
 ```
 
 If the CocoaPods repository is not configured, run the following command:
@@ -56,13 +75,16 @@ $ pod update
 $ pod install
 ```
 
-### Run
+Click **Product > Run** to start the app in Xcode.
 
-Click **Product > Run** to start the app in Xcode.  You will see a screen like this:
+Your application will be running within your chosen device emulator.
 
-<img src="README_Images/basic_home_screen.png" alt="Empty App Screenshot" width="250px"/>
+## Next Steps
+* Learn more about augmenting your iOS applications on IBM Cloud with the [Mobile Programming Guide](https://cloud.ibm.com/docs/mobile?topic=mobile-getting-started).
+* Explore other [sample applications](https://cloud.ibm.com/developer/appservice/starter-kits) on IBM Cloud.
 
-The application has built in integration points for the Mobile Analytics, Push Notifications, AppLaunch and Mobile Foundation services. If you have added these services then the basic code is automatically generated for the services.
+## License
 
-### License
-This package contains code licensed under the Apache License, Version 2.0 (the "License"). You may obtain a copy of the License at http://www.apache.org/licenses/LICENSE-2.0 and may also view the License in the LICENSE file within this package.
+This sample application is licensed under the Apache License, Version 2. Separate third-party code objects invoked within this code pattern are licensed by their respective providers pursuant to their own separate licenses. Contributions are subject to the [Developer Certificate of Origin, Version 1.1](https://developercertificate.org/) and the [Apache License, Version 2](https://www.apache.org/licenses/LICENSE-2.0.txt).
+
+[Apache License FAQ](https://www.apache.org/foundation/license-faq.html#WhatDoesItMEAN)
