@@ -41,7 +41,7 @@ To get started building this application locally, you can run the application na
 #### Native Application Development
 
 - Install the latest [Xcode](https://developer.apple.com/xcode) 11.0+ version.
-- iOS 13.0+
+- iOS 12.0+
 - Swift 5.0
 
 
