@@ -12,6 +12,7 @@ jobs:
         uses: actions/checkout@master
       - name: Pod Install
         run: |
+          cd ./
           ls -al
           pod install --repo-update --clean-install
         shell: bash
