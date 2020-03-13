@@ -12,8 +12,9 @@ jobs:
         uses: actions/checkout@master
       - name: Pod Install
         run: |
-          ls -al
+          ls -a
           pod install --repo-update --clean-install
+          ls -a
       - uses: ty0x2333/cocoapods-action@master
         with:
           workspace: iosapp.xcworkspace
