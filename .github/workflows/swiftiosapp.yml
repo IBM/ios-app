@@ -18,5 +18,4 @@ jobs:
         with:
           workspace: iosapp.xcworkspace
           scheme: iosapp
-          additional_build_params: -destination 'platform=iOS Simulator,name=iPhone 8,OS=13.3'
-          additional_build_params: -enableCodeCoverage NO
+          additional_build_params: -enableCodeCoverage=NO -destination 'platform=iOS Simulator,name=iPhone 8,OS=13.3'
