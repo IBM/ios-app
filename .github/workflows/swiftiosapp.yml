@@ -1,0 +1,31 @@
+name: Swift iOS application
+on: [push,pull_request]
+jobs:
+  test:
+    name: Test
+    runs-on: macOS-latest
+    strategy:
+        matrix:
+          destination: ['platform=iOS Simulator,name=iPhone 8,OS=13.3']
+    steps:
+      - name: Checkout
+        uses: actions/checkout@master
+      - name: Set XCode Version
+        run: sudo xcode-select -s /Applications/Xcode_11.3.1.app
+      - name: Build
+        run: |
+          ls -al
+          pod install --repo-update --clean-install
+      - uses: ty0x2333/cocoapods-action@master
+        with:
+          workspace: iosapp.xcworkspace
+          scheme: iosapp
+          additional_lint_params: --private
+          lint: false
+          additional_build_params: -destination 'platform=iOS Simulator,name=iPhone 8,OS=13.3'
+      - name: Test
+        run: |
+          ls -al
+          xcodebuild clean test -workspace iosapp.xcworkspace -scheme iosapp -destination "${destination}" CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO ONLY_ACTIVE_ARCH=NO
+        env:
+          destination: ${{ matrix.destination }}
