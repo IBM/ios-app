@@ -49,7 +49,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Ask questions on Slack"/>
                                 <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="string" keyPath="url" value="https://slack-invite-ibm-cloud-tech.mybluemix.net/"/>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="url" value="https://ic-devops-slack-invite.us-south.devops.cloud.ibm.com/"/>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="visit:" destination="BYZ-38-t0r" eventType="touchDown" id="fbC-EM-4t8"/>
